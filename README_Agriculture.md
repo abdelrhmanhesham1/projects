@@ -1,5 +1,7 @@
-🌾**Crop Recommendation System
-📌 Project Overview**
+🌾**Crop Recommendation System**
+
+**📌 Project Overview**
+
 This project is an AI-powered crop recommendation system that helps farmers determine the best crop to grow based on soil and weather conditions. Using machine learning, the system predicts the most suitable crop based on factors such as soil nutrients (NPK), temperature, humidity, pH, and rainfall.
 
 The project includes a Dash-powered interactive web application that allows users to input values using sliders and get real-time recommendations.
