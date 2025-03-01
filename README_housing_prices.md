@@ -1,63 +1,58 @@
-**🏠 Housing Price Prediction**
+# Housing Price Prediction
 
-**📌 Project Overview**
+## Overview
+This project builds a machine learning model to predict housing prices using various regression techniques. The dataset is preprocessed, analyzed, and used to train multiple models, including a custom-built Linear Regression, Scikit-Learn's Linear Regression, and Polynomial Regression.
 
-This project focuses on predicting housing prices using Linear Regression and Polynomial Regression models. 
+## Features
+- **Data Preprocessing**: Handling missing values, duplicate removal, feature engineering, and outlier detection.
+- **Exploratory Data Analysis (EDA)**: Correlation analysis, heatmaps, and boxplots.
+- **Feature Engineering**: Creating new features to improve model accuracy.
+- **Regression Models**:
+  - Custom-built Linear Regression
+  - Scikit-Learn Linear Regression
+  - Polynomial Regression (Degree 3, Ridge Regularization)
+- **Model Evaluation**: Mean Absolute Error (MAE) and R-squared score.
+- **Visualizations**: Scatter plots, residual plots, and model comparisons.
 
-By analyzing various features such as area, number of bedrooms, bathrooms, and additional amenities, the model estimates house prices with high accuracy.
+## Dataset
+The dataset (`Housing.csv`) contains various housing attributes, including:
+- `price`: The target variable.
+- `area`, `bedrooms`, `bathrooms`, `stories`, `parking`: Numerical features.
+- `mainroad`, `guestroom`, `basement`, `hotwaterheating`, `airconditioning`, `prefarea`, `furnishingstatus`: Categorical features.
 
-The project also includes data preprocessing, feature selection, and exploratory data analysis (EDA) to ensure a robust predictive model.
+## Installation
+Ensure you have the following libraries installed:
+```bash
+pip install numpy pandas matplotlib seaborn scikit-learn plotly
+```
 
-**🛠️ Technologies Used**
+## Data Preprocessing
+1. **Load and Explore Data**: Read the dataset, check for missing values, duplicates, and summary statistics.
+2. **One-Hot Encoding**: Convert categorical variables into numerical format.
+3. **Feature Engineering**: Create new features such as `log_price`, `log_area`, `area_bedrooms`, `bath_stories`, etc.
+4. **Outlier Removal**: Using the Interquartile Range (IQR) method to remove extreme values.
+5. **Feature Scaling**: Standardization using `StandardScaler`.
 
-Pandas & NumPy – Data preprocessing and feature engineering
+## Model Training
+### 1. Custom Linear Regression
+A linear regression model implemented from scratch using the Normal Equation.
 
-Scikit-learn – Machine learning models (Linear & Polynomial Regression)
+### 2. Scikit-Learn Linear Regression
+Using `LinearRegression` from `sklearn.linear_model`.
 
-Matplotlib & Seaborn – Data visualization and correlation heatmaps
+### 3. Polynomial Regression
+- Polynomial transformation of features (degree = 3)
+- Regularization using `Ridge` regression.
 
-Plotly – Interactive visualizations for model performance analysis
+## Model Evaluation
+Models are evaluated using:
+- **Mean Absolute Error (MAE)**: Measures prediction error in the original price scale.
+- **R-squared Score (R²)**: Indicates the proportion of variance explained by the model.
 
-**⚙️ Features**
+## Visualization
+1. **Feature Correlation Heatmap**: Shows relationships between variables.
+2. **Actual vs. Predicted Prices**: Scatter plots comparing different models.
+3. **Residual Analysis**: Checks model performance by plotting residuals.
 
-✔ Data Cleaning & Preprocessing – Handling missing values, removing duplicates, and encoding categorical features.
 
-✔ Exploratory Data Analysis (EDA) – Correlation heatmaps, boxplots, and summary statistics.
 
-✔ Feature Engineering & Selection – Selecting the most relevant features based on correlation analysis.
-
-✔ Model Training & Evaluation – Implementing:
-
-Linear Regression (Custom & Scikit-learn)
-
-Polynomial Regression (Degree = 2) for better accuracy
-
-✔ Performance Metrics – Mean Squared Error (MSE) to evaluate model performance.
-
-✔ Visualization of Predictions – Comparing models with scatter plots and regression curves.
-
-📂 **Dataset**
-
-The dataset contains housing attributes such as:
-
-Price
-
-Area
-
-Number of bedrooms & bathrooms
-
-Stories, parking, and other amenities
-
-The target variable (price) represents the selling price of the house.
-
-📊 **Model Performance**
-
-Model	Mean Squared Error (MSE)
-
-Linear Regression (Scratch)	0.826
-
-Linear Regression (Scikit-learn)	0.826
-
-Polynomial Regression (Degree = 2)	0.793
-
-**🔹 Polynomial Regression provides better accuracy due to its ability to capture complex relationships in data.**
