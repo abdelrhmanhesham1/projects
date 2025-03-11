@@ -1,6 +1,6 @@
 **🏡 California Housing Price Analysis**
 
-**📌 Project Overview**
+**📌 Project Overview** 
 
 This project analyzes housing prices in California using exploratory data analysis (EDA), visualization, and correlation analysis. 
 
