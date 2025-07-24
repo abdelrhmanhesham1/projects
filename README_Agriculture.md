@@ -77,4 +77,3 @@ cross validation: 0.97
 🔥 Confusion Matrix
 
 The model performs exceptionally well with high precision & recall across different crop types.
-
